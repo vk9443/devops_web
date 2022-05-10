@@ -1,11 +1,4 @@
-FROM centos:latest
-
-MAINTAINER NewstarCorporation
-
-RUN yum -y install httpd
-
+FROM httpd:2.4
+MAINTAINER vinodkumar
 COPY index.html /var/www/html/
-
-CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
-
 EXPOSE 80
